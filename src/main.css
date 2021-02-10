@@ -3,3 +3,6 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@import "./assets/markdown.css";
+@import "./assets/resets.css";
