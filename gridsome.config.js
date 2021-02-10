@@ -5,6 +5,15 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
-  plugins: []
-}
+  siteName: "Gridsome",
+  plugins: [
+    {
+      use: "@gridsome/plugin-critical",
+      options: {
+        paths: ["/"],
+        width: 1300,
+        height: 900,
+      },
+    },
+  ],
+};
