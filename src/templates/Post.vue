@@ -19,7 +19,7 @@
 
         <div
           :class="{ 'pb-10': $page.post.author || $page.post.tags }"
-          class="markdown text-lg leading-normal text-gray-700"
+          class="markdown text-xl leading-normal text-gray-700"
           v-html="$page.post.content"
         />
 
