@@ -2,7 +2,7 @@
   <header>
     <div
       v-if="post.cover"
-      class="post-cover overflow-hidden relative"
+      class="post-cover overflow-hidden relative text-shadow"
       :class="[post.fullscreen ? 'fullscreen' : 'max-h-cover']"
     >
       <div
@@ -49,7 +49,7 @@
           {{ post.timeToRead }} min read
         </p>
         <h1
-          class="text-3xl sm:text-5xl leading-tight font-sans font-bold mb-2 text-black"
+          class="text-3xl sm:text-5xl leading-tight font-sans font-bold mb-2 text-black text-shadow"
         >
           {{ post.title }}
         </h1>
@@ -86,6 +86,9 @@
 <style>
 .post-cover {
   max-height: 500px;
+}
+.text-shadow {
+  text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.36) !important;
 }
 </style>
 
