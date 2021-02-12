@@ -2,9 +2,10 @@
   "name": "mhamri",
   "private": true,
   "scripts": {
+    "start": "gridsome develop",
     "build": "gridsome build",
-    "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "newpost": "node scripts/newPost.js"
   },
   "dependencies": {
     "@gridsome/plugin-critical": "^0.2.0",
