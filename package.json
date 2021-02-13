@@ -16,11 +16,14 @@
     "@microflash/gridsome-plugin-feed": "^1.2.1",
     "gridsome": "^0.7.0",
     "gridsome-plugin-remark-prismjs-all": "^0.3.5",
+    "gridsome-plugin-robots-txt": "^1.0.2",
     "medium-zoom": "^1.0.6",
+    "remark-hint": "^1.0.9",
     "tailwindcss": "^2.0.3",
     "vue-parallaxy": "^1.1.1"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0"
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "autoprefixer": "^9.8.6"
   }
 }

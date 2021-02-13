@@ -1,9 +1,13 @@
 const tailwind = require('tailwindcss');
-const purgecss = require('@fullhuman/postcss-purgecss');
+const purgeCss = require('@fullhuman/postcss-purgecss');
+const autoPrefixer = require('autoprefixer');
 
 const postcssPlugins = [tailwind()];
 
-if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(require('./purgecss.config.js')));
+if (process.env.NODE_ENV === 'production') {
+  postcssPlugins.push(purgeCss(require('./purgecss.config.js')));
+  postcssPlugins.push(autoPrefixer());
+}
 
 const siteInfo = {
   name: 'Mohammad Hossein Amri',
@@ -24,7 +28,7 @@ module.exports = {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
-      plugins: ['gridsome-plugin-remark-prismjs-all']
+      plugins: ['gridsome-plugin-remark-prismjs-all', 'remark-hint']
     }
   },
   plugins: [
@@ -84,6 +88,10 @@ module.exports = {
     //sitemap
     {
       use: '@gridsome/plugin-sitemap'
+    },
+    // robot
+    {
+      use: 'gridsome-plugin-robots-txt'
     }
   ],
   templates: {
