@@ -6,15 +6,17 @@ const postcssPlugins = [tailwind()];
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(require('./purgecss.config.js')));
 
 const siteInfo = {
-  siteName: 'Mohammad Hossein Amri',
-  siteDescription: 'Mohammad Hossein Amri technical blog'
+  name: 'Mohammad Hossein Amri',
+  description: 'Mohammad Hossein Amri technical blog',
+  url: 'https://mhamri.com',
+  language: 'en'
 };
 
 module.exports = {
-  siteName: siteInfo.siteName,
-  siteDescription: siteInfo.siteDescription,
-  siteUrl: 'https://mhamri.com',
-  titleTemplate: `%s | Mohammad Hossein Amri`,
+  siteName: siteInfo.name,
+  siteDescription: siteInfo.description,
+  siteUrl: siteInfo.url,
+  titleTemplate: `%s | ${siteInfo.name}`,
   icon: 'src/favicon.png',
 
   transformers: {
@@ -66,8 +68,17 @@ module.exports = {
       options: {
         contentTypes: ['Post'],
         feedOptions: {
-          description: siteInfo.siteDescription
-        }
+          description: siteInfo.description,
+          link: siteInfo.url,
+          language: siteInfo.language
+        },
+        feedItemOptions: node => ({
+          title: node.title,
+          description: node.description,
+          link: siteInfo.url + node.path,
+          date: node.date,
+          image: node.cover
+        })
       }
     }
   ],
