@@ -65,16 +65,10 @@ export default {
         { name: "twitter:creator", content: "@cossssmin" },
         { name: "twitter:image", content: this.ogImageUrl },
       ],
+      link: [{ rel: "canonical", href: this.$static.metadata.siteUrl }],
     };
   },
-  computed: {
-    config() {
-      // return config;
-    },
-    ogImageUrl() {
-      // return `${this.config.siteUrl}/images/bleda-card.png`;
-    },
-  },
+  computed: {},
 };
 </script>
 

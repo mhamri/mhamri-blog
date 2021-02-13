@@ -7,11 +7,10 @@ if (process.env.NODE_ENV === "production")
   postcssPlugins.push(purgecss(require("./purgecss.config.js")));
 
 module.exports = {
-  siteName: "Gridsome",
-  siteDescription:
-    "Bleda is a blog starter kit for Gridsome, the Vue.js static site generator. It's inspired by Attila for Ghost, and styled with Tailwind CSS.",
-  siteUrl: "https://gridsome-starter-bleda.netlify.com",
-  titleTemplate: `%s | Bleda`,
+  siteName: "Mohammad Hossein Amri",
+  siteDescription: "Mohammad Hossein Amri technical blog",
+  siteUrl: "https://mhamri.com",
+  titleTemplate: `%s | Mohammad Hossein Amri`,
   icon: "src/favicon.png",
 
   transformers: {

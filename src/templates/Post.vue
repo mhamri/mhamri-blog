@@ -138,6 +138,13 @@ export default {
         { name: "twitter:creator", content: "@cossssmin" },
         { name: "twitter:image", content: this.ogImageUrl },
       ],
+      link: [
+        { rel: "canonical", href: this.postUrl },
+        {
+          rel: "home",
+          href: this.$static.metadata.siteUrl,
+        },
+      ],
     };
   },
   mounted() {
