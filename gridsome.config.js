@@ -80,6 +80,10 @@ module.exports = {
           image: node.cover
         })
       }
+    },
+    //sitemap
+    {
+      use: '@gridsome/plugin-sitemap'
     }
   ],
   templates: {
