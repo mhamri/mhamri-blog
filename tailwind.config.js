@@ -1,9 +1,9 @@
 module.exports = {
-  purge: [],
+  purge: ['./src/**/*.vue', './src/**/*.js', './src/**/*.jsx', './src/**/*.html', './src/**/*.pug', './src/**/*.md'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ["Inter", "sans-serif"],
+      sans: ['Inter', 'sans-serif']
 
       // serif: ["Inter", "sans-serif"],
 
@@ -14,10 +14,10 @@ module.exports = {
       // body: ["Inter", "sans-serif"],
     },
 
-    extend: {},
+    extend: {}
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 };

@@ -5,9 +5,14 @@ const postcssPlugins = [tailwind()];
 
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(require('./purgecss.config.js')));
 
-module.exports = {
+const siteInfo = {
   siteName: 'Mohammad Hossein Amri',
-  siteDescription: 'Mohammad Hossein Amri technical blog',
+  siteDescription: 'Mohammad Hossein Amri technical blog'
+};
+
+module.exports = {
+  siteName: siteInfo.siteName,
+  siteDescription: siteInfo.siteDescription,
   siteUrl: 'https://mhamri.com',
   titleTemplate: `%s | Mohammad Hossein Amri`,
   icon: 'src/favicon.png',
@@ -53,6 +58,16 @@ module.exports = {
       use: '@gridsome/plugin-google-analytics',
       options: {
         id: 'G-L5WBEDZ0LT'
+      }
+    },
+    // rss
+    {
+      use: '@microflash/gridsome-plugin-feed',
+      options: {
+        contentTypes: ['Post'],
+        feedOptions: {
+          description: siteInfo.siteDescription
+        }
       }
     }
   ],
