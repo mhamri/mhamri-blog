@@ -191,3 +191,10 @@ p.hint.error {
 p.hint.error:before {
   background-color: #ef4e4e;
 }
+
+/* embeded items like youtube, twitter, ...  */
+
+[class$='-embed'] {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
