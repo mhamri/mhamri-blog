@@ -28,7 +28,16 @@ module.exports = {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
-      plugins: ['gridsome-plugin-remark-prismjs-all', 'remark-hint']
+      plugins: [
+        'gridsome-plugin-remark-prismjs-all',
+        'remark-hint',
+        [
+          '@noxify/gridsome-plugin-remark-embed',
+          {
+            enabledProviders: ['Youtube', 'Twitter', 'Gist', 'Giphy', 'Codepen']
+          }
+        ]
+      ]
     }
   },
   plugins: [
