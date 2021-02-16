@@ -4,5 +4,7 @@
 
 @tailwind utilities;
 
-@import "./assets/markdown.css";
-@import "./assets/resets.css";
+@import './assets/resets.css';
+@import './assets/markdown.css';
+@import './assets/remark-hint.css';
+@import './assets/remark-embed.css';
