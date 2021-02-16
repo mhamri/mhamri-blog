@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
-    "autoprefixer": "^9.8.6"
+    "autoprefixer": "^9.8.6",
+    "postcss-nested": "^4.2.3"
   }
 }

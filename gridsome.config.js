@@ -1,8 +1,9 @@
 const tailwind = require('tailwindcss');
 const purgeCss = require('@fullhuman/postcss-purgecss');
 const autoPrefixer = require('autoprefixer');
+const postCssNested = require('postcss-nested');
 
-const postcssPlugins = [tailwind()];
+const postcssPlugins = [tailwind(), postCssNested()];
 
 if (process.env.NODE_ENV === 'production') {
   postcssPlugins.push(purgeCss(require('./purgecss.config.js')));
