@@ -32,10 +32,11 @@ module.exports = {
       plugins: [
         'gridsome-plugin-remark-prismjs-all',
         'remark-hint',
+        'remark-emoji',
         [
           '@noxify/gridsome-plugin-remark-embed',
           {
-            enabledProviders: ['Youtube', 'Twitter', 'Gist', 'Giphy', 'Codepen']
+            enabledProviders: ['Youtube', 'Twitter', 'Gist', 'Giphy']
           }
         ]
       ]

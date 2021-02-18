@@ -1,4 +1,18 @@
 .markdown {
+  *:not([data-language]):not(.gridsome-highlight-code-line) {
+    @apply max-w-xl md:max-w-2xl xl:max-w-3xl mx-auto;
+  }
+
+  [data-language] {
+    @apply mx-auto max-w-xl xl:max-w-5xl sm:max-w-3xl;
+    @apply mb-6;
+    @apply text-base;
+  }
+
+  code.language-text {
+    @apply text-base text-red-800 bg-gray-300 px-2;
+  }
+
   p,
   ul,
   ol {
@@ -18,12 +32,16 @@
     @apply list-decimal pl-4;
   }
 
+  h1 {
+    @apply font-extrabold text-black my-6;
+  }
+
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply font-sans font-bold text-black my-6;
+    @apply font-bold text-black my-6;
   }
 
   h5,
@@ -46,7 +64,6 @@
   h6 {
     @apply text-sm;
   }
-
   @screen sm {
     h2 {
       @apply text-4xl;
