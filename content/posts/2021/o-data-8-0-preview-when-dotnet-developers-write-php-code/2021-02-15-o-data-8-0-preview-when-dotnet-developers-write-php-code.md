@@ -4,7 +4,7 @@ slug: asp-net-core-o-data-8-0-preview-when-dotnet-developers-write-php-code
 description: a collection of feedback at functional and code level about Asp.net core 5 OData 8.0 package
 date: 2021-02-15 23:27:56
 author: Mohammad Hossein Amri
-tags: ['OData', 'AspNetCore', 'C#']
+tags: ['OData', 'AspNetCore']
 cover: https://source.unsplash.com/featured/?textures-patterns
 fullScreen: false
 excerpt: the Microsoft.AspNetCore.OData version 8 is about to release, and after reading their code, I noticed a lot of red flags. Learn why it's one of the worst updates the OData on asp.net core is going to receive.
