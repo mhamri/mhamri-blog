@@ -26,9 +26,9 @@ You can create classes that inherit from one of those base convention classes an
 
 there is one interface and one class related to this:
 
-1- `IODataControllerActionConvention`: this one is the interface; you can choose your condition to choose a controller and action. It has an `AppliesToController()` method which returns a boolean, and if it returns true, then it's an OData controller, then there is another method, `AppliesToAction()`. It decides which of those methods in the controller gets called.
+1. `IODataControllerActionConvention`: this one is the interface; you can choose your condition to choose a controller and action. It has an `AppliesToController()` method which returns a boolean, and if it returns true, then it's an OData controller, then there is another method, `AppliesToAction()`. It decides which of those methods in the controller gets called.
 
-1- `OperationRoutingConvention`: this is an abstract class (which implements `IODataControllerActionConvention`). as long as an `EntitySet` or `Singleton` is available in the context, it lets you decide what action method to call on a controller. Later we see that any conventions that implement this class are not good for an under-heavy development app, and the only feasible built-in convention is Attribute routing. Also, we discuss why this base class is one of the main problems in v8.
+1. `OperationRoutingConvention`: this is an abstract class (which implements `IODataControllerActionConvention`). as long as an `EntitySet` or `Singleton` is available in the context, it lets you decide what action method to call on a controller. Later we see that any conventions that implement this class are not good for an under-heavy development app, and the only feasible built-in convention is Attribute routing. Also, we discuss why this base class is one of the main problems in v8.
 
 # PHP like routing conventions
 
