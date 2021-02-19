@@ -3,9 +3,13 @@
     <div class="w-full sm:w-1/2 mb-4 sm:mb-0">
       <a href="https://www.linkedin.com/in/mhamri/">
         <img
+          class="inline-block mr-2"
           src="https://img.shields.io/badge/-mhamri-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mhamri/"
           alt="Mohammad Hossein Amri linkedin badge"
         />
+      </a>
+      <a href="https://www.github.com/mhamri/">
+        <img class="inline-block" src="https://img.shields.io/badge/-mhamri-%23181717?style=flat-square&logo=github" alt="Mohammad Hossein Amri github badge" />
       </a>
     </div>
     <div class="w-full sm:w-1/2">
