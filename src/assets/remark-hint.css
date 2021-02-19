@@ -23,7 +23,6 @@ p.hint.error:before,
 p.hint.warn:before {
   border-radius: 100%;
   color: #fff;
-  content: '!';
   font-size: 14px;
   font-weight: 700;
   left: -12px;
@@ -36,19 +35,21 @@ p.hint.warn:before {
 }
 
 p.hint.tip {
-  border-left: 4px solid #27ab83;
-}
-
-p.hint.tip:before {
-  background-color: #27ab83;
-}
-
-p.hint.warn {
   border-left: 4px solid #f0b429;
 }
 
-p.hint.warn:before {
+p.hint.tip:before {
   background-color: #f0b429;
+  content: '!';
+}
+
+p.hint.warn {
+  border-left: 4px solid #4240d6;
+}
+
+p.hint.warn:before {
+  background-color: #4240d6;
+  content: '#';
 }
 
 p.hint.error {
@@ -57,4 +58,5 @@ p.hint.error {
 
 p.hint.error:before {
   background-color: #ef4e4e;
+  content: 'x';
 }
