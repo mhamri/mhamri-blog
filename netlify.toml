@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "https://mhamri-blog.netlify.app"
-  to = "https://mhamri.com/"
-  status = 301
-  force = true
