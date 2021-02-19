@@ -26,7 +26,7 @@
       </div>
       <ClientOnly>
         <parallax :speed-factor="speedFactor" :sectionHeight="80">
-          <img :src="post.cover" :alt="post.title" />
+          <img :src="post.cover" :alt="post.title" width="500px" class="article-cover-image" />
         </parallax>
       </ClientOnly>
     </div>
@@ -63,6 +63,10 @@
 <style>
 .post-cover {
   max-height: 500px;
+
+  .article-cover-image {
+    @apply bg-yellow-800;
+  }
 }
 .text-shadow {
   text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.36) !important;
