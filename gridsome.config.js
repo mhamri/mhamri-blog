@@ -3,11 +3,15 @@ const purgeCss = require('@fullhuman/postcss-purgecss');
 const autoPrefixer = require('autoprefixer');
 const postCssNested = require('postcss-nested');
 
-const postcssPlugins = [tailwind(), postCssNested()];
+const postcssPlugins = [
+  postCssNested({ preserveEmpty: true }),
+  tailwind()
+  // purgeCss(require('./purgecss.config.js'))
+];
 
 if (process.env.NODE_ENV === 'production') {
-  postcssPlugins.push(purgeCss(require('./purgecss.config.js')));
-  postcssPlugins.push(autoPrefixer());
+  // postcssPlugins.push(purgeCss(require('./purgecss.config.js')));
+  // postcssPlugins.push(autoPrefixer());
 }
 
 const siteInfo = {
