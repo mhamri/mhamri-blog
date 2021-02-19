@@ -34,8 +34,6 @@ exec('purgecss -c "./purgecss.config.js"', function(error, stdout, stderr) {
   console.table(data);
 });
 
-fs.copyFileSync('./_redirects', './dist/_redirects');
-
 function getFilesizeInKiloBytes(filename) {
   var stats = fs.statSync(filename);
   var fileSizeInBytes = stats.size / 1024;
