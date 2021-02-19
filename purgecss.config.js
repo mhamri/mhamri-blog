@@ -1,5 +1,7 @@
 module.exports = {
-  content: ['./src/**/*.vue', './src/**/*.js', './src/**/*.html', './content/**/*.md', './dist/**/*.html', './dist/**/*.json', './dist/**/*.js'],
+  content: ['./dist/**/*.html', './dist/**/*.json', './dist/**/*.js'],
+  css: ['./dist/assets/css/*.css'],
+  output: './dist/assets/css',
   safelist: [
     'body',
     'html',

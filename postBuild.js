@@ -21,7 +21,7 @@ for (let f of files) {
 
 console.log('Run PurgeCSS...');
 
-exec('purgecss -css "dist/**/*.css" --content "dist/**/*.html","dist/**/*.js" -o ' + cssFolder, function(error, stdout, stderr) {
+exec('purgecss -c "./purgecss.config.js"', function(error, stdout, stderr) {
   console.log('PurgeCSS done');
   console.log();
 
