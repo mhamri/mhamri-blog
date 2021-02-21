@@ -286,7 +286,7 @@ public void ConfigureServices(IServiceCollection services)
 
 With the code above, Your API URL becomes `~/MyEntity`.
 
-but you can also `prefix` your EDM
+but you can also `prefix` your EDM:
 
 ```csharp {7-8}{codeTitle: "startup.cs"}
 public void ConfigureServices(IServiceCollection services)
@@ -343,13 +343,13 @@ Moreover, `[ODataRoute]` supports a template as the first argument; I had some g
 
 As I mentioned earlier, v8 lost the support for WebAPI, so if you are looking to add querying abilities of the OData to your none OData API, then good luck with that. You need to write your own convention. Also, you must define the EDM (which literally nowadays it's redundant). Then, you need to set your `EntitySet` either by creating a controller with the same name or using `[ODataRoutePrefix]` and setting it manually. Then add `[ODataRoute]` and `[EnableQuery]` on top of your action method. Your only challenge is to figure out what your outcome URL will look like; after a little guessing, maybe you get it right or just use a [helper middleware](https://github.com/OData/AspNetCoreOData/blob/2ea300651db9f608b57bfb3314ded96bc76a6fa4/sample/ODataRoutingSample/Extensions/ODataRouteHandler.cs) that is available in the OData sample.
 
-# minor bug
+# a minor bug :wink:
 
 Though v8 is in preview, there is still a bug that makes all of the conventions (except `AttributeRoutingConvention`) useless!
 
 When you add the OData in your `startup.cs` you **have to** use `AddModel`, but one good change about it is, now you don't need to set up a prefix (do you remember [prefix](#odatarouteprefixattribute-doesnt-to-set-the-prefix)? :smile:)
 
-When you don't set the prefix, v8 default the prefix to an empty string and save it inside a dictionary. Then, when it wants to read the prefix, it checks if it's null or not, and if it is, then it will return false, which means the prefix is wrong or not found.
+When you don't set the prefix, v8 default the prefix to an empty string and save it inside a dictionary. Then, when it wants to read the EDM, it checks if the prefix's null or not, and if it is, then it will return false, which means the prefix is wrong or not found!
 
 ```csharp {7,14}{codeTitle:"ODataOptions.cs"}
 public class ODataOptions{
@@ -377,7 +377,9 @@ public class ODataOptions{
 }
 ```
 
-As mentioned, the only exception is when you want to use `AttributeRoutingConvention`, because when you set `[ODataRoutePrefix]`, you are already setting the prefix to an empty string. So if you want to try all those conventions, make sure that you use a prefix.
+As mentioned, the only exception is when you want to use `AttributeRoutingConvention`, because when you set `[ODataRoutePrefix]`, you are already setting the prefix to an empty string.
+
+So if you want to try all those conventions, make sure that you use a prefix.
 
 # let's talk about OData architecture
 
