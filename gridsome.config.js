@@ -74,13 +74,6 @@ module.exports = {
         height: 900
       }
     },
-    // google analytics
-    {
-      use: '@gridsome/plugin-google-analytics',
-      options: {
-        id: 'G-L5WBEDZ0LT'
-      }
-    },
     // rss
     {
       use: '@microflash/gridsome-plugin-feed',
