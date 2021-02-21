@@ -19,7 +19,7 @@ export default function(Vue, { router, head, isClient }) {
 
   if (process.env.NODE_ENV !== 'development') {
     head.script.push({
-      src: 'https://www.googletagmanager.com/gtag/js?id=G-L5WBEDZ0LT',
+      src: 'https://www.mhamri.com/gtag/js?id=G-L5WBEDZ0LT',
       async: true
     });
     head.script.push({
