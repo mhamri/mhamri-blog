@@ -3,6 +3,10 @@
     @apply max-w-xl md:max-w-2xl xl:max-w-3xl mx-auto;
   }
 
+  img {
+    width: 100%;
+  }
+
   [data-language] {
     @apply mx-auto max-w-xl xl:max-w-5xl sm:max-w-3xl;
     @apply mb-6;
