@@ -1,5 +1,5 @@
 .markdown {
-  *:not([data-language]):not(.gridsome-highlight-code-line) {
+  & > *:not([data-language]):not(.gridsome-highlight-code-line) {
     @apply max-w-xl md:max-w-2xl xl:max-w-3xl mx-auto;
   }
 

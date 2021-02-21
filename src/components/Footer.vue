@@ -1,6 +1,6 @@
 <template>
   <footer class="text-gray-700 text-sm leading-normal flex flex-wrap justify-between mx-auto max-w-3xl px-6 sm:px-12">
-    <div class="w-full sm:w-1/2 mb-4 sm:mb-0">
+    <div class="xs:w-1/2 mb-4 sm:mb-0">
       <a href="https://www.linkedin.com/in/mhamri/">
         <img
           class="inline-block mr-2"
@@ -12,7 +12,7 @@
         <img class="inline-block" src="https://img.shields.io/badge/-mhamri-%23181717?style=flat-square&logo=github" alt="Mohammad Hossein Amri github badge" />
       </a>
     </div>
-    <div class="w-full sm:w-1/2">
+    <div class="xs:w-1/2">
       <nav>
         <ul class="flex sm:justify-end -mx-2">
           <li class="px-2">
